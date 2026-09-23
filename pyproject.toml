@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompt-lint"
+version = "0.1.0"
+description = "Static linter for LLM system prompts and agent instructions"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Sulaiman Vesal" }]
+keywords = ["llm", "prompt-engineering", "linter", "agents", "devtools"]
+
+[project.scripts]
+prompt-lint = "promptlint.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
